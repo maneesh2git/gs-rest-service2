@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "rising-solstice-389112",
+  "private_key_id": "1d3c6c8703a3f36f02fcb35ff506626754986982",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9x2PRd6mUAJKB\njZhwC8VbDBn2w8jduIrkHs5CM6P9CmchgyFjAz8508xLKq1k4sYU2XOEi+aFRS/h\nAvjDKCWqxv9/a/WMKqhK9y+pk1MYUxwcNR2f6NFoVaOvnYCo72w268T+eDVMV1qw\noUPL92fwJDvWwQHWbifyCSPrp1K7xTr4TujR8cTl/PrA/absdu1/AxkbJY4zqhA/\nfH8gX4VVEbdEM6IbsNJH7rM4+4b0m45ypxpj7F6ZqRXYee/AjhMdSmb0GVNvK5YE\ndBlkg3RIMsVuxY+r21wLQV8nWpyO5DkfJuaQIkiL16LzCfQvNbWElExJ7y8HEGw9\n1/TdDL7bAgMBAAECggEAIbErbH21EnyDhhKQVJwSXpaoaWHa4Fop9lPtxF0MqRjW\ntGFmZQCnkemjJFkgTX/hMMRmOMrpkxF0bZssdOFExqvrokCVaFwOYri9snpgTzo6\nDFv1tXUM8Fv74mqw880Fxj5XS+IlfDcp95+5vJVg04ZrRTYg0GPgHZ03zld3XbRY\nXDAInIaLlA/Tr0lGn0jPgWnLCx0F2kKTinwOwqtU4+p9fKSspX8jx5BpmjEUM5Kk\nysPsAHJxCgvigPyaLjJ/gLEWVw7ZvE3HfRoz9jDRi8UZcvy/V/0U6zSEcKTlYgB0\nP3D6evWTvXYADVUq/tj9e9A1KlUoJl/G3W3ywntGcQKBgQD6ZHG7wJVDvHNq34SS\n473cZ2Dbr8mHTKnWkRInRkf66PbX36lUjLXSWA71nndxizScWfO/j9TKX8EZadoO\nWAlODs5mGq47e0JVwgEnxtfGjYUCGXKL31yOSESGTDvrX2+kgXkdLiz3Iur1KCSb\nRtSnmMlGlQiU0nqv9dn5X3MtaQKBgQDCB29SU/ANMf/afS+iuwAS3p5V3cV8bxPP\n3pwhLnhGE6sRk+LhBBraeR8xQgGwDbLj+9yMeu2LGzx8YURCEexuNU5TRItxIDaH\nVJugCy6qcBkK8yT6aNYXC8M66vnyfcQi6K5AHCSQbKYPsluxI0IiKvJ+0aasnCFy\nU3WmdpSNowKBgAvXEhW5vpUsZRzJowA7KrAwZ0EcJ+Bw/Jr70yruRNsVhw6gMeag\nnLxsk5CDxMwms/8stbz6NSq4qm3kNn51JUN+qb3kRxbi9jkN6nYSDgQCjyaRQ3xf\nvIWx3yOmmTLBGYti3/JES7YH/apIEqsRB19Bd0sSIwy+gzSs4HjNTan5AoGBAJjS\nBkoPtoiOEvhhlT1UkBBMquTykXMagb49lTdFRJHdN+XWVuHnu8bLk1fWp0Gk6HtM\nij9TKvlfcFp+uaZYO6Hp9lD7MeDeAFTCvPhnFlBDjlXjgAKCw+zO5Ovo2wi1KeBc\n57Gy+NGP4ZOHZVS1coc60Fg2hFJ7fpRvS8DasNKFAoGARYzFRgCWC4sSgtYep8dN\nJcAx7drz3ciGZkwx+Rd+wxmWPPeUApQSD6FHdlq/hl+kSLSS9GRu7+EGAknin8zg\n801GhVY6kjF+mJZVfCP3D42uYGbn9f4CjTjk5ZHVjIDR6Z9rxk94/QqOIZ0xmh1K\nSNffmrFJ0flqZN9jcZIXqNM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gitlab-gke-serviceaccount-b@rising-solstice-389112.iam.gserviceaccount.com",
+  "client_id": "114272539795288972697",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gitlab-gke-serviceaccount-b%40rising-solstice-389112.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

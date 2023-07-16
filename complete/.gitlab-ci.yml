@@ -1,0 +1,56 @@
+variables:
+  #DOCKER_DRIVER: overlay
+  #DOCKER_HOST: tcp://docker:2375/
+  CONTAINER_TEST_IMAGE: $CI_REGISTRY_IMAGE:latest
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+maven-build-job:       # This job runs in the build stage, which runs first.
+  #image: maven:latest
+  image: maven:3.6-jdk-11
+  stage: build
+  before_script: 
+    - cd complete/
+  script:
+    - echo "Compiling the code..."
+    - mvn package
+  artifacts:
+     paths:
+       - complete/target/*.jar 
+
+
+deploy-job:      # This job runs in the deploy stage.
+  #image: docker:latest
+  image: docker:19.03.12
+  services: 
+    - docker:19.03.12-dind
+  #services:
+   # - docker:dind
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  before_script:
+    - docker --version
+    - echo "docker user and password and registry $CI_REGISTRY_USER , $CI_REGISTRY_PASSWORD, $CI_REGISTRY"
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker info
+    - echo "Login to gitlab..."
+    #- echo "$CI_REGISTRY_PASSWORD" | docker login --username "$CI_REGISTRY_USER"  "$CI_REGISTRY" --password-stdin
+ 
+  script:
+    - echo "Deploying application...  repo url and commit sha $REPO_URL:$CI_COMMIT_SHA"
+    #- docker build -t $REPO_URL:$CI_COMMIT_SHA .
+    - cd complete
+    - docker build -t $CONTAINER_TEST_IMAGE .
+    - docker images
+    #- docker build -t registry.gitlab.com/myusername/myproject . -f Dockerfile
+    #- docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+    - echo "Pushing to gitlab..."
+    #- docker push registry.gitlab.com/myusername/myproject
+    #- docker push $REPO_URL:$CI_COMMIT_SHA
+    - docker push $CONTAINER_TEST_IMAGE
+    - echo "Application successfully deployed."
+
+after_script:
+    - docker logout registry.gitlab.com 2>/dev/null
+    #- rm /root/.docker/config.json 2>/dev/null
